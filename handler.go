@@ -16,7 +16,7 @@ func MapHandler(pathsToUrls map[string]string, fallback http.Handler) http.Handl
 
 	handler := func(writer http.ResponseWriter, request *http.Request) {
 		if pathsToUrls[request.URL.RequestURI()] != "" {
-			http.Redirect(writer, request, pathsToUrls[request.URL.RequestURI()], 301)
+			http.Redirect(writer, request, pathsToUrls[request.URL.RequestURI()], 302)
 		} else {
 			fallback.ServeHTTP(writer, request)
 		}
