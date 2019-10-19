@@ -1,4 +1,4 @@
-package urlshort_gophercises
+package UrlShort_gophercises
 
 import (
 	"net/http"
